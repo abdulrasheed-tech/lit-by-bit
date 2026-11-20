@@ -3,73 +3,190 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lit By Bit — We Build what people was not able to see before</title>
-<meta name="description" content="Lit By Bit is a group of minds building ambitious products that people love, from Bhakkar, Pakistan.">
+<title>Lit By Bit — Software Studio in Bhakkar, Pakistan</title>
+<meta name="description" content="Lit By Bit is a six-person software studio in Bhakkar, Pakistan. We design and build web, mobile and AI products — including Web PDF, a free PDF editor that runs entirely in your browser.">
 <style>
-:root{--bg:#0b0f14;--bg2:#111827;--card:#151f2e;--text:#f3f4f6;--muted:#9ca3af;--accent:#f59e0b;--accent2:#38bdf8;--line:#1f2937}
-*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-a{color:var(--accent2);text-decoration:none} a:hover{text-decoration:underline}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-header{position:sticky;top:0;background:rgba(11,15,20,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
-nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
-.logo{font-weight:800;font-size:20px;letter-spacing:.2px;color:#fff} .logo span{color:var(--accent)}
-nav .links a{color:var(--muted);margin-left:20px;font-size:15px} nav .links a:hover{color:#fff}
-.hero{padding:88px 0 64px;background:radial-gradient(600px 300px at 80% 0%,rgba(245,158,11,.18),transparent),radial-gradient(500px 300px at 10% 20%,rgba(56,189,248,.14),transparent)}
-.eyebrow{color:var(--accent);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:13px}
-h1{font-size:clamp(36px,6vw,60px);line-height:1.05;margin:16px 0}
-.lede{font-size:19px;color:#d1d5db;max-width:640px}
-.tagline{font-size:18px;color:var(--accent);font-weight:600;margin-top:18px}
-.cta{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:12px 20px;border-radius:999px;background:var(--accent);color:#111827;font-weight:700}
-.btn.ghost{background:transparent;border:1px solid #374151;color:#fff}
-.note{margin-top:22px;display:inline-block;background:#1f2937;border:1px solid #374151;padding:10px 14px;border-radius:12px;color:#e5e7eb}
-section{padding:64px 0} h2{font-size:32px;margin:0 0 8px} .sub{color:var(--muted);max-width:680px;margin:0 0 28px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
-.card h3{margin:0 0 8px;font-size:19px} .card p{margin:0;color:var(--muted)}
-.pill{display:inline-block;background:#0f172a;border:1px solid #334155;border-radius:999px;padding:4px 10px;margin:4px 4px 0 0;font-size:13px;color:#cbd5e1}
-.status{font-size:13px;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
-footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted)}
-footer a{color:#e5e7eb}
-@media(max-width:640px){nav .links{display:none}.hero{padding:56px 0 40px}}
+:root{
+  --ink:#141414; --ink2:#3f3f3f; --muted:#6b6b6b; --line:#e5e0d8;
+  --paper:#faf9f6; --card:#ffffff; --accent:#b45309; --accent-soft:#fef3c7;
+  --dark:#141414;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;font-size:17px}
+a{color:var(--ink);text-decoration:none}
+a:hover{color:var(--accent)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:10}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.brand{font-weight:800;font-size:19px;letter-spacing:-.02em}
+.brand em{font-style:normal;color:var(--accent)}
+nav .links a{margin-left:28px;font-size:15px;color:var(--ink2)}
+nav .links a.cta{border:1px solid var(--ink);border-radius:999px;padding:8px 16px;color:var(--ink)}
+nav .links a.cta:hover{background:var(--ink);color:#fff}
+.hero{padding:96px 0 72px;border-bottom:1px solid var(--line)}
+.hero .kicker{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 20px}
+.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(42px,6.5vw,72px);line-height:1.05;letter-spacing:-.02em;margin:0 0 24px;max-width:16ch}
+.hero h1 i{font-style:italic;color:var(--accent)}
+.hero p.lede{font-size:20px;color:var(--ink2);max-width:62ch;margin:0 0 32px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--dark);color:#fff;padding:13px 24px;border-radius:999px;font-weight:600;font-size:16px}
+.btn:hover{background:var(--accent);color:#fff}
+.btn.light{background:transparent;border:1px solid #c9c2b8;color:var(--ink)}
+.btn.light:hover{border-color:var(--ink);background:transparent;color:var(--ink)}
+.facts{display:flex;gap:40px;flex-wrap:wrap;margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}
+.facts div b{display:block;font-size:28px;letter-spacing:-.02em}
+.facts div span{font-size:14px;color:var(--muted)}
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 12px}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:36px;line-height:1.15;letter-spacing:-.01em;margin:0 0 12px}
+.sub{color:var(--ink2);max-width:68ch;margin:0 0 36px;font-size:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
+.card h3{margin:0 0 8px;font-size:20px;letter-spacing:-.01em}
+.card p{margin:0;color:var(--ink2);font-size:16px}
+.card .meta{font-size:13px;color:var(--muted);margin-top:14px;text-transform:uppercase;letter-spacing:.08em}
+.tag{display:inline-block;background:var(--accent-soft);color:#92400e;font-size:13px;font-weight:700;border-radius:999px;padding:4px 10px;margin-bottom:12px}
+.two{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
+@media(max-width:760px){.two{grid-template-columns:1fr}nav .links a:not(.cta){display:none}.hero{padding:64px 0 48px}}
+.steps{counter-reset:s}
+.step{border-top:2px solid var(--ink);padding-top:16px}
+.step b{font-size:15px}
+.step h3{margin:8px 0}
+.person{display:flex;gap:16px;align-items:flex-start}
+.avatar{flex:0 0 56px;width:56px;height:56px;border-radius:50%;background:var(--dark);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px}
+.person h3{margin:0;font-size:18px}
+.person .role{font-size:14px;color:var(--accent);font-weight:700;margin:2px 0 8px}
+.person p{font-size:15px}
+.skills{margin-top:12px;font-size:13px;color:var(--muted)}
+.work{border:1px solid var(--line);border-radius:16px;background:var(--card);padding:32px;display:grid;grid-template-columns:1.3fr .7fr;gap:32px}
+@media(max-width:760px){.work{grid-template-columns:1fr}}
+.work ul{margin:0;padding-left:20px;color:var(--ink2)}
+.work li{margin:6px 0}
+footer{padding:40px 0 56px;color:var(--muted);font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 </style>
 </head>
 <body>
-<header><div class="wrap"><nav><div class="logo">Lit <span>By</span> Bit</div><div class="links"><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#team">Team</a><a href="#contact">Contact</a></div></nav></div></header>
+<header><div class="wrap"><nav>
+<div class="brand">Lit <em>By</em> Bit</div>
+<div class="links"><a href="#services">Services</a><a href="#work">Work</a><a href="#team">Team</a><a class="cta" href="#contact">Start a project</a></div>
+</nav></div></header>
+
 <main>
 <section class="hero"><div class="wrap">
-<p class="eyebrow">Lit By Bit &middot; Bhakkar, Pakistan</p>
-<h1>Group of minds Building Ambitious Products that People Love</h1>
-<p class="lede">We make digital and smart solutions for your smart problems that have ruined your daily peace.</p>
-<p class="tagline">We Build what people was not able to see before</p>
-<div class="cta"><a class="btn" href="#work">See our work</a><a class="btn ghost" href="mailto:hello@litbybit.com">hello@litbybit.com</a></div>
-<p class="note">Check Our New Product, A complete Free PDF Editor</p>
+<p class="kicker">Software studio &middot; Bhakkar, Pakistan</p>
+<h1>We build what people <i>couldn&rsquo;t see before.</i></h1>
+<p class="lede">Lit By Bit is a small team of six developers, designers and engineers. We turn an idea into a working product &mdash; web, mobile, desktop or AI &mdash; and ship it, bit by bit.</p>
+<div class="actions">
+<a class="btn" href="#work">See our work</a>
+<a class="btn light" href="#contact">Start a project</a>
+</div>
+<div class="facts">
+<div><b>6</b><span>Co-founders</span></div>
+<div><b>1</b><span>Product live</span></div>
+<div><b>6</b><span>Services</span></div>
+<div><b>2026</b><span>Founded in Bhakkar</span></div>
+</div>
 </div></section>
 
-<section id="about"><div class="wrap"><h2>About</h2><p class="sub">A group of Like Minded Persons with mission to make a mark in the tech world and provide opportunities for talent from backward area to fight on the front line.</p><p><strong>Location:</strong> Bhakkar, Pakistan<br><strong>Email:</strong> <a href="mailto:hello@litbybit.com">hello@litbybit.com</a><br><strong>Website:</strong> <a href="https://litbybit.com">litbybit.com</a></p></div></section>
-
-<section id="services"><div class="wrap"><h2>Services</h2><p class="sub">What we do.</p><div class="grid">
-<div class="card"><h3>Web Development</h3><p>We make SaaS, MVPs from small to large scale.</p></div>
-<div class="card"><h3>Mobile Apps</h3></div>
-<div class="card"><h3>UI / UX Design</h3></div>
-<div class="card"><h3>Cloud &amp; DevOps</h3></div>
-<div class="card"><h3>AI Products</h3></div>
-<div class="card"><h3>Branding</h3></div>
+<section id="about"><div class="wrap"><div class="two">
+<div>
+<p class="eyebrow">About</p>
+<h2>A team from a small city, building for everyone.</h2>
+<p class="sub">We started Lit By Bit with one belief: good software doesn&rsquo;t have to come from a big city. Our team is based in Bhakkar, Pakistan, and we&rsquo;re here to prove that talent from a smaller place can compete on the front line &mdash; and to create opportunities for other developers here to do the same.</p>
+<p class="sub">We work in a small team, talk directly to the people we build for, and keep our products simple, fast and honest about what they do.</p>
+</div>
+<div class="card">
+<h3>What we care about</h3>
+<p>Products that solve a real problem. Software people can trust with their files and their time. Work we can show, not just describe.</p>
+<p class="meta">Bhakkar, Pakistan</p>
+</div>
 </div></div></section>
 
-<section id="work"><div class="wrap"><h2>Work</h2><p class="sub">Our first project.</p><div class="grid"><div class="card"><p class="status">Idea</p><h3>Web PDF</h3><p>A local web based PDF editor which can run locally without sharing your files online with all features free of cost.</p><p><span class="pill">Next Js</span></p></div></div></div></section>
+<section id="services"><div class="wrap">
+<p class="eyebrow">Services</p>
+<h2>What we do</h2>
+<p class="sub">From a first prototype to a product people pay for.</p>
+<div class="grid">
+<div class="card"><h3>Web Development</h3><p>Web apps, SaaS products and MVPs &mdash; from a first working version to a product at scale.</p></div>
+<div class="card"><h3>Mobile Apps</h3><p>iOS and Android apps, built for the way people actually use their phones.</p></div>
+<div class="card"><h3>UI / UX Design</h3><p>Clear interfaces and flows, designed before a line of code is written.</p></div>
+<div class="card"><h3>Cloud &amp; DevOps</h3><p>Hosting, deployment and infrastructure that stays up when people start using it.</p></div>
+<div class="card"><h3>AI Products</h3><p>Practical AI features &mdash; summarising, extracting and automating real work, not demos.</p></div>
+<div class="card"><h3>Branding</h3><p>Names, identity and a look that makes a new product feel established.</p></div>
+</div>
+</div></section>
 
-<section id="team"><div class="wrap"><h2>Team</h2><p class="sub">Six co-founders, one mission.</p><div class="grid">
-<div class="card"><h3>Abdul Rasheed Talal</h3><p><strong>Co Founder</strong></p><p>I love engineering the products from vision to reality</p><p><span class="pill">React</span><span class="pill">Node</span><span class="pill">Python</span><span class="pill">TypeScript</span><span class="pill">Problem Solving</span><span class="pill">Communication Skills</span><span class="pill">Team Collaboration</span></p><p><a href="https://github.com/Abdul-Rasheed-Talal">GitHub</a></p></div>
-<div class="card"><h3>Ali Raza</h3><p><strong>Co founder</strong></p><p>Mind With a Soul For Acing Critical Problems to diverse Solutions</p><p><span class="pill">Problem solving</span><span class="pill">React</span><span class="pill">Express</span><span class="pill">SQL</span></p></div>
-<div class="card"><h3>Abdul Saboor</h3><p><strong>Co founder</strong></p><p>A person with solid taste and observation</p><p><span class="pill">UI/UX</span><span class="pill">Figma</span><span class="pill">React</span><span class="pill">GSAP</span><span class="pill">Framer</span><span class="pill">Adobe CC</span></p></div>
-<div class="card"><h3>Muhammad Imran</h3><p><strong>Co Founder</strong></p><p>I Create Systems That Never Crashes</p><p><span class="pill">SQL</span><span class="pill">Node js</span><span class="pill">Express</span><span class="pill">Postman</span><span class="pill">Docker</span></p></div>
-<div class="card"><h3>Hammad Ali</h3><p><strong>Co founder</strong></p><p>I put energy to make products feel alive</p><p><span class="pill">React</span><span class="pill">Node</span><span class="pill">Javascript</span><span class="pill">Angular</span></p></div>
-<div class="card"><h3>Adil Ali</h3><p><strong>Co founder</strong></p><p>I love connecting dots that feel solid</p><p><span class="pill">React</span><span class="pill">Python</span><span class="pill">Fast API</span><span class="pill">Flask</span></p></div>
+<section id="work"><div class="wrap">
+<p class="eyebrow">Work</p>
+<h2>Our first product is live.</h2>
+<p class="sub">Not a concept. You can use it today.</p>
+<div class="work">
+<div>
+<span class="tag">Live &middot; Free</span>
+<h3 style="font-family:Georgia,serif;font-size:28px;margin:0 0 10px">Web PDF</h3>
+<p style="color:var(--ink2)">A free PDF editor that runs entirely in your browser. Merge PDFs, reorder pages, delete the ones you don&rsquo;t need, rotate sideways pages &mdash; then download the result.</p>
+<p style="color:var(--ink2)">Your files never leave your laptop. No account, no upload, no cost.</p>
+<div class="actions" style="margin-top:20px"><a class="btn" href="https://web-pdf-virid.vercel.app">Use Web PDF &rarr;</a></div>
+</div>
+<div>
+<p class="meta" style="margin-top:0">What it does</p>
+<ul>
+<li>Merge two or more PDFs into one</li>
+<li>Reorder, delete and rotate pages</li>
+<li>Page previews before you download</li>
+<li>Works offline once loaded &mdash; files stay local</li>
+</ul>
+<p class="meta">Built with &middot; Client-side JavaScript, pdf.js, pdf-lib</p>
+<p class="meta"><a href="https://github.com/abdulrasheed-tech/web-pdf">View the code on GitHub &rarr;</a></p>
+</div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<p class="eyebrow">How we work</p>
+<h2>Small steps, shipped often.</h2>
+<div class="grid">
+<div class="step"><b>01</b><h3>Understand the problem</h3><p>We start with the people who will use it, and what&rsquo;s costing them time or money today.</p></div>
+<div class="step"><b>02</b><h3>Build the smallest useful version</h3><p>A working product in weeks, not months &mdash; the core job, done well.</p></div>
+<div class="step"><b>03</b><h3>Ship, listen, improve</h3><p>We put it in front of real users, fix what breaks, and add what they actually ask for.</p></div>
+</div>
+</div></section>
+
+<section id="team"><div class="wrap">
+<p class="eyebrow">Team</p>
+<h2>Six co-founders, one team.</h2>
+<p class="sub">The people building Lit By Bit. Photos coming soon.</p>
+<div class="grid">
+<div class="card person"><div class="avatar">AT</div><div><h3>Abdul Rasheed Talal</h3><p class="role">Co-founder</p><p>&ldquo;I love engineering products from vision to reality.&rdquo;</p><p class="skills">React &middot; Node &middot; Python &middot; TypeScript</p><p class="skills"><a href="https://github.com/Abdul-Rasheed-Talal">GitHub &rarr;</a></p></div></div>
+<div class="card person"><div class="avatar">AR</div><div><h3>Ali Raza</h3><p class="role">Co-founder</p><p>&ldquo;A mind with a soul for turning critical problems into diverse solutions.&rdquo;</p><p class="skills">Problem solving &middot; React &middot; Express &middot; SQL</p></div></div>
+<div class="card person"><div class="avatar">AS</div><div><h3>Abdul Saboor</h3><p class="role">Co-founder</p><p>&ldquo;A person with solid taste and observation.&rdquo;</p><p class="skills">UI/UX &middot; Figma &middot; React &middot; GSAP</p></div></div>
+<div class="card person"><div class="avatar">MI</div><div><h3>Muhammad Imran</h3><p class="role">Co-founder</p><p>&ldquo;I create systems that never crash.&rdquo;</p><p class="skills">SQL &middot; Node.js &middot; Express &middot; Docker</p></div></div>
+<div class="card person"><div class="avatar">HA</div><div><h3>Hammad Ali</h3><p class="role">Co-founder</p><p>&ldquo;I put energy into making products feel alive.&rdquo;</p><p class="skills">React &middot; Node &middot; JavaScript &middot; Angular</p></div></div>
+<div class="card person"><div class="avatar">AA</div><div><h3>Adil Ali</h3><p class="role">Co-founder</p><p>&ldquo;I love connecting dots that feel solid.&rdquo;</p><p class="skills">React &middot; Python &middot; FastAPI &middot; Flask</p></div></div>
+</div>
+</div></section>
+
+<section id="contact"><div class="wrap"><div class="two">
+<div>
+<p class="eyebrow">Contact</p>
+<h2>Have a product in mind?</h2>
+<p class="sub">Tell us what you&rsquo;re trying to build &mdash; or what&rsquo;s costing you time today. We&rsquo;ll reply honestly about whether we can help, and how long it would take.</p>
+</div>
+<div class="card">
+<h3>Get in touch</h3>
+<p>Email: <a href="mailto:hello@litbybit.com">hello@litbybit.com</a><br>
+Location: Bhakkar, Pakistan<br>
+Web PDF: <a href="https://web-pdf-virid.vercel.app">web-pdf-virid.vercel.app</a><br>
+Code: <a href="https://github.com/abdulrasheed-tech">github.com/abdulrasheed-tech</a></p>
+</div>
 </div></div></section>
-
-<section id="contact"><div class="wrap"><h2>Contact</h2><p class="sub">Have an ambitious product in mind? Talk to us.</p><p>Email: <a href="mailto:hello@litbybit.com">hello@litbybit.com</a><br>Location: Bhakkar, Pakistan<br>Website: <a href="https://litbybit.com">litbybit.com</a></p></div></section>
 </main>
-<footer><div class="wrap">&copy; Lit By Bit &middot; Bhakkar, Pakistan &middot; <a href="mailto:hello@litbybit.com">hello@litbybit.com</a></div></footer>
+
+<footer><div class="wrap">
+<span>&copy; 2026 Lit By Bit &middot; Bhakkar, Pakistan</span>
+<span>We build what people couldn&rsquo;t see before.</span>
+</div></footer>
 </body>
 </html>
